@@ -1,9 +1,10 @@
-<?php
 add_filter('wp_handle_upload_prefilter','tc_handle_upload_prefilter');
 function tc_handle_upload_prefilter($file)
 {
 	if(!current_user_can('administrator'))
     {
+			return array("error"=>get_post()->post_type);
+
 		//veličina slike u bajtovima:
 		$slika = $file;
 		$ime_slike = $slika["name"];
