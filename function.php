@@ -1,3 +1,4 @@
+<?php
 add_filter('wp_handle_upload_prefilter','tc_handle_upload_prefilter');
 function tc_handle_upload_prefilter($file)
 {
